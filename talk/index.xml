@@ -5,12 +5,313 @@
     <link>https://zyuanlim.github.io/talk/</link>
       <atom:link href="https://zyuanlim.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 16 Sep 2017 10:00:00 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=true) shape:circle]</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://zyuanlim.github.io/talk/</link>
     </image>
+    
+    <item>
+      <title>NUS IEEE-Young Professionals Analytics &amp; Machine Learning Talk</title>
+      <link>https://zyuanlim.github.io/talk/nus-ieee-ml-talk/</link>
+      <pubDate>Sat, 16 Sep 2017 10:00:00 +0800</pubDate>
+      <guid>https://zyuanlim.github.io/talk/nus-ieee-ml-talk/</guid>
+      <description>&lt;p&gt;This is a presentation that I gave at NUS IEEE Young Professionals Analytics &amp;amp; Machine Learning. The full codes and slides can be found 
+&lt;a href=&#34;https://github.com/zyuanlim/NUS-IEEE-Analytics-Talk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe
+       src=&#34;https://nbviewer.jupyter.org/github/zyuanlim/NUS-IEEE-Analytics-Talk/blob/caf8c227cee7d8a463313dfb93cf45978b9824f6/PeekingIntoTheBlackBox.ipynb&#34;
+       width=&#34;90%&#34;
+       height=&#34;1000px&#34;
+       style=&#34;border:none;&#34;&gt;
+ &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Singapore City-AI Meetup 3.0</title>
+      <link>https://zyuanlim.github.io/talk/singapore-city-ai/</link>
+      <pubDate>Thu, 17 Aug 2017 17:00:00 +0800</pubDate>
+      <guid>https://zyuanlim.github.io/talk/singapore-city-ai/</guid>
+      <description>&lt;p&gt;I was honoured to be invited to present on Model Bias at Singapore City-AI&amp;rsquo;s 3rd Quarterly Meetup.&lt;/p&gt;
+&lt;p&gt;I presented a case study from Gojek- our drivers ranking model and various ways we can use to dissect the model in order to understand the relationship between features and prediction. I also highlighted the importance of evaluating the fairness of the model and how it impacts the overall system. Later, I used a case study from a credit default prediction challenge to demonstrate how we can use Partial Dependence Plot (PDP) to figure out how each feature affects the prediction. It was a great experience and I enjoyed interacting with other esteemed guest speakers from Nvidia, MSD, Allianz and the audience. It ended with a great panel discussion on bias in AI / ML models and how we can tackle that.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import xgboost as xgb
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+import xgbfir
+pd.options.display.max_columns = 100
+pd.options.display.max_rows = 100
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+import plotly.graph_objs as go
+init_notebook_mode(connected=True)
+pd.set_option(&#39;max_colwidth&#39;,200)
+import cPickle
+import lime
+from sklearn.model_selection import train_test_split
+&lt;/code&gt;&lt;/pre&gt;
+&lt;script&gt;requirejs.config({paths: { &#39;plotly&#39;: [&#39;https://cdn.plot.ly/plotly-latest.min&#39;]},});if(!window.Plotly) {{require([&#39;plotly&#39;],function(plotly) {window.Plotly=plotly;});}}&lt;/script&gt;
+&lt;h1 id=&#34;peeking-inside-the-blackbox&#34;&gt;Peeking Inside the Blackbox&lt;/h1&gt;
+&lt;p&gt;Discover potential bias inside machine learning models&lt;/p&gt;
+&lt;p&gt;Zane Lim&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Senior data-scientist at Go-jek&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Lead and mentor a sub-team of data-scientists&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mentor in Udacity&amp;rsquo;s AI nanodegree&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Avid participant in Kaggle / data science hackathons&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linkedin.com/in/limzane/&#34;&gt;https://www.linkedin.com/in/limzane/&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/zanelim&#34;&gt;https://www.kaggle.com/zanelim&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;ai-and-machine-learning-applications-and-pitfalls&#34;&gt;AI and Machine Learning: Applications and Pitfalls&lt;/h2&gt;
+&lt;p&gt;Applications&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.theverge.com/2017/5/25/15689462/alphago-ke-jie-game-2-result-google-deepmind-china&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;AlphaGo beats Ke Jie&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.newscientist.com/article/2143144-deepmind-dojo-will-train-ai-to-beat-human-starcraft-players/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DeepMind training AI to beat human Starcraft players&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://www.theverge.com/2017/8/11/16137388/dota-2-dendi-open-ai-elon-musk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OpenAI Dota Bot destroys world&amp;rsquo;s best player&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html&#34;&gt;https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.theguardian.com/technology/self-driving-cars&#34;&gt;https://www.theguardian.com/technology/self-driving-cars&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Pitfalls&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.sciencemag.org/news/2017/04/even-artificial-intelligence-can-acquire-biases-against-race-and-gender&#34;&gt;http://www.sciencemag.org/news/2017/04/even-artificial-intelligence-can-acquire-biases-against-race-and-gender&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.forbes.com/sites/mariyayao/2017/05/01/dangers-algorithmic-bias-homogenous-thinking-ai/#2228a48270b3&#34;&gt;https://www.forbes.com/sites/mariyayao/2017/05/01/dangers-algorithmic-bias-homogenous-thinking-ai/#2228a48270b3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://techcrunch.com/2016/12/10/5-unexpected-sources-of-bias-in-artificial-intelligence/&#34;&gt;https://techcrunch.com/2016/12/10/5-unexpected-sources-of-bias-in-artificial-intelligence/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;./news.png&#34; alt=&#34;title&#34;&gt;
+Critical as more and more decisions are made using algorithms&lt;/p&gt;
+&lt;h2 id=&#34;case-study-on-go-jek&#34;&gt;Case study on Go-Jek&lt;/h2&gt;
+&lt;img src=&#34;./gojek.png&#34; width=&#34;1000&#34; height=&#34;100&#34; align=&#34;middle&#34;/&gt; 
+* On-demand mobile platform that provides a variety of complete services
+    * transportation (300,000 *ojek* and car driver partners)
+    * logistics / food delivery (100,000 food vendors)
+    * payment
+    * other on-demand services (masseurs, cleaners etc.)
+* As of July 2017, downloaded more than 44 million times
+* Operates in 35 cities in Indonesia- Jakarta, Bandung, Surabaya, Bali, Medan, Yogyakarta etc.
+&lt;h3 id=&#34;drivers-ranking-model&#34;&gt;Drivers Ranking Model&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;./drivers-gojek.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Real-time machine learning model that handles &lt;strong&gt;hundreds&lt;/strong&gt; of driver assignment (per second) during peak hours&lt;/li&gt;
+&lt;li&gt;Rank drivers who are available in the vicinity of customer whenever a booking is requested&lt;/li&gt;
+&lt;li&gt;Based on certain criteria eg. &lt;em&gt;probability of completion&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Assign the job to the top ranked driver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;features-of-model&#34;&gt;Features of Model&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;basic features- transactional data (time of day, location, gps accuracy)&lt;/li&gt;
+&lt;li&gt;derived features- drivers&amp;rsquo; attributes (statistics, performance)&lt;/li&gt;
+&lt;li&gt;re-trained everyday on a rolling window of historical data to ensure freshness&lt;/li&gt;
+&lt;li&gt;deployed and a/b tested&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Very successful, conversion rate gain of &lt;strong&gt;3%&lt;/strong&gt;, acceptance rate gain of &lt;strong&gt;10%&lt;/strong&gt; on average against control&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;How do we assess biasness and fairness of the model?&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;Walking on fine line, affects the livelihood of drivers, any perceived mistreatment will trigger riots&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Dissect the model and identify potential bias&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Plot and visualize the &amp;ldquo;model&amp;rdquo; directly (individual trees in gradient boosting model)&lt;/li&gt;
+&lt;li&gt;Relationship between feature and prediction
+&lt;ul&gt;
+&lt;li&gt;Partial Dependence Plot (PDP) / Individual Conditional Expectation (ICE) Plot&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Explains&amp;rdquo; the prediction
+&lt;ul&gt;
+&lt;li&gt;Local Interpretable Model-agnostic Explanations (LIME)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Evaluate the impact of the model&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Fairness of the system- Gini coefficient of drivers income / jobs assigned&lt;/li&gt;
+&lt;li&gt;Average score (probability) / rank for each driver&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Promote transparency&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Monitor and measure driver complaints on not getting jobs&lt;/li&gt;
+&lt;li&gt;Explain and provide suggestions to drivers on how they can improve their prospect of getting jobs (indirectly promote good behaviours)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;case-study-on-credit-card-default-payment&#34;&gt;Case study on Credit Card Default Payment&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;A dataset containing, default payments, history of payments, bill statements and demographics of 30,000 credit card clients in Taiwan from April 2005 to September 2005&lt;/li&gt;
+&lt;li&gt;Predict the probability of default payment in next month&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset&#34;&gt;https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Lichman, M. (2013). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df = pd.read_csv(&amp;quot;../data/UCI_Credit_Card.csv&amp;quot;)
+X = df.drop(&#39;default.payment.next.month&#39;, axis=1)
+y = df[&#39;default.payment.next.month&#39;]
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;with open(&amp;quot;../data/xgb_clf.pkl&amp;quot;) as f:
+    xgb_clf = cPickle.load(f)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+&lt;li&gt;ID: ID of each client&lt;/li&gt;
+&lt;li&gt;LIMIT_BAL: Amount of given credit in NT dollars (includes individual and family/supplementary credit&lt;/li&gt;
+&lt;li&gt;SEX: Gender (1=male, 2=female)&lt;/li&gt;
+&lt;li&gt;EDUCATION: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)&lt;/li&gt;
+&lt;li&gt;MARRIAGE: Marital status (1=married, 2=single, 3=others)&lt;/li&gt;
+&lt;li&gt;AGE: Age in years&lt;/li&gt;
+&lt;li&gt;PAY_0: Repayment status in September, 2005 (-1=pay duly, 1=payment delay for one month, 2=payment delay for two months, &amp;hellip; 8=payment delay for eight months, 9=payment delay for nine months and above)&lt;/li&gt;
+&lt;li&gt;PAY_2: Repayment status in August, 2005 (scale same as above)&lt;/li&gt;
+&lt;li&gt;PAY_3: Repayment status in July, 2005 (scale same as above)&lt;/li&gt;
+&lt;li&gt;PAY_4: Repayment status in June, 2005 (scale same as above)&lt;/li&gt;
+&lt;li&gt;PAY_5: Repayment status in May, 2005 (scale same as above)&lt;/li&gt;
+&lt;li&gt;PAY_6: Repayment status in April, 2005 (scale same as above)&lt;/li&gt;
+&lt;li&gt;BILL_AMT1: Amount of bill statement in September, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;BILL_AMT2: Amount of bill statement in August, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;BILL_AMT3: Amount of bill statement in July, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;BILL_AMT4: Amount of bill statement in June, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;BILL_AMT5: Amount of bill statement in May, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;BILL_AMT6: Amount of bill statement in April, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;PAY_AMT1: Amount of previous payment in September, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;PAY_AMT2: Amount of previous payment in August, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;PAY_AMT3: Amount of previous payment in July, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;PAY_AMT4: Amount of previous payment in June, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;PAY_AMT5: Amount of previous payment in May, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;PAY_AMT6: Amount of previous payment in April, 2005 (NT dollar)&lt;/li&gt;
+&lt;li&gt;default.payment.next.month: Default payment (1=yes, 0=no)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;plotting-the-model-directly&#34;&gt;Plotting the &amp;ldquo;model&amp;rdquo; directly&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;features_importance = pd.DataFrame.from_dict(xgb_clf.get_fscore(), orient=&#39;index&#39;).reset_index().rename(columns={&#39;index&#39;: &#39;features&#39;, 0: &#39;importance&#39;})
+features_importance.sort_values(&#39;importance&#39;, ascending=False, inplace=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;features_importance.plot.barh(x=&#39;features&#39;, y=&#39;importance&#39;, figsize=(20,15))
+plt.gca().invert_yaxis()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./singapore-city-ai_17_0.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# plotting the trees directly
+xgb.to_graphviz(xgb_clf, num_trees=0, size=&#39;150,200&#39;) 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./singapore-city-ai_18_0.svg&#34; alt=&#34;svg&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;partial-dependence-plot-pdp&#34;&gt;Partial Dependence Plot (PDP)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;A graph plotting the relationship of one single feature with the prediction / probability on average&lt;/li&gt;
+&lt;li&gt;For each combination of a unique value of the feature with all other features, what is the average prediction / probability&lt;/li&gt;
+&lt;li&gt;One caveat of using average is that it does not represent the usual case, as in any single realistic case, it depends on the combination with other features&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def plotly_lines(df, x, y):
+    data = [
+    go.Scatter(
+        x=df[x], # assign x as the dataframe column &#39;x&#39;
+        y=df[y],
+        name=x
+    )
+    ]
+    return data
+
+def plotly_figure(df, title, x_title, y_title, x, y):
+    layout = go.Layout(
+        title=title,
+        xaxis=dict(
+            title=x_title,
+            titlefont=dict(
+                family=&#39;Courier New, monospace&#39;,
+                size=18,
+                color=&#39;#7f7f7f&#39;
+            )
+        ),
+        yaxis=dict(
+            title=y_title,
+            titlefont=dict(
+                family=&#39;Courier New, monospace&#39;,
+                size=18,
+                color=&#39;#7f7f7f&#39;
+            )
+        )
+    )
+    return go.Figure(data=plotly_lines(df, x, y), layout=layout)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_plot = pd.read_csv(&amp;quot;../data/age.csv&amp;quot;)
+ax = df_plot.plot(x=&#39;AGE&#39;, y=&#39;yhat&#39;, title=&#39;Age&#39;, figsize=(15,5), legend=False)
+ax.set_xlabel(&amp;quot;Age&amp;quot;)
+ax.set_ylabel(&amp;quot;Probability of Default&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.text.Text at 0x11d3003d0&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./singapore-city-ai_21_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_plot = pd.read_csv(&amp;quot;../data/sex.csv&amp;quot;)
+ax = df_plot.plot(x=&#39;SEX&#39;, y=&#39;yhat&#39;, title=&#39;Sex&#39;, figsize=(15,5), legend=False)
+ax.set_xlabel(&amp;quot;Sex&amp;quot;)
+ax.set_ylabel(&amp;quot;Probability of Default&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.text.Text at 0x11d5f0290&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./singapore-city-ai_22_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_plot = pd.read_csv(&amp;quot;../data/marriage.csv&amp;quot;)
+ax = df_plot.plot(x=&#39;MARRIAGE&#39;, y=&#39;yhat&#39;, title=&#39;Marital Status&#39;, figsize=(15,5), legend=False)
+ax.set_xlabel(&amp;quot;Marital Status&amp;quot;)
+ax.set_ylabel(&amp;quot;Probability of Default&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.text.Text at 0x11d7bba50&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./singapore-city-ai_23_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.MARRIAGE.value_counts(normalize=True, sort=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;0    0.001800
+1    0.455300
+2    0.532133
+3    0.010767
+Name: MARRIAGE, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_plot = pd.read_csv(&amp;quot;../data/education.csv&amp;quot;)
+ax = df_plot.plot(x=&#39;EDUCATION&#39;, y=&#39;yhat&#39;, title=&#39;Education&#39;, figsize=(15,5), legend=False)
+ax.set_xlabel(&amp;quot;Education&amp;quot;)
+ax.set_ylabel(&amp;quot;Probability of Default&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;matplotlib.text.Text at 0x11d9a9a50&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;./singapore-city-ai_25_1.png&#34; alt=&#34;png&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.EDUCATION.value_counts(normalize=True, sort=False)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;0    0.000467
+1    0.352833
+2    0.467667
+3    0.163900
+4    0.004100
+5    0.009333
+6    0.001700
+Name: EDUCATION, dtype: float64
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Other techniques to dissect the black box&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Individual Conditional Expectation (ICE) Plot&lt;/li&gt;
+&lt;li&gt;Local Interpretable Model-agnostic Explanations (LIME)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Reference:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/1602.04938.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Why Should I Trust You?” Explaining the Predictions of Any Classifier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://arxiv.org/pdf/1309.6392.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peeking Inside the Black Box: Visualizing Statistical Learning with Plots of Individual Conditional Expectation&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.datarobot.com/blog/give-me-one-good-reason-to-trust-artificial-intelligence/&#34;&gt;https://www.datarobot.com/blog/give-me-one-good-reason-to-trust-artificial-intelligence/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Build AI with conscience, trust and empathy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Thank you!&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

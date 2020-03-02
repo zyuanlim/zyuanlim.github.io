@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Zane Lim">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Singapore AI 3rd Quarterly Meetup">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://zyuanlim.github.io/talk/singapore-city-ai/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://zyuanlim.github.io/talk/singapore-city-ai/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@zyuanlim">
+  <meta property="twitter:creator" content="@zyuanlim">
+  
+  <meta property="og:site_name" content="Zane Lim">
+  <meta property="og:url" content="https://zyuanlim.github.io/talk/singapore-city-ai/">
+  <meta property="og:title" content="Singapore City-AI Meetup 3.0 | Zane Lim">
+  <meta property="og:description" content="Singapore AI 3rd Quarterly Meetup"><meta property="og:image" content="https://zyuanlim.github.io/talk/singapore-city-ai/featured.png">
+  <meta property="twitter:image" content="https://zyuanlim.github.io/talk/singapore-city-ai/featured.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-03-02T08:40:38&#43;08:00">
+    
+    <meta property="article:modified_time" content="2017-08-17T17:00:00&#43;08:00">
+  
+
+  
+
+
+
+  
+    
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://zyuanlim.github.io/talk/singapore-city-ai/"
+  },
+  "name": "Singapore City-AI Meetup 3.0",
+  
+  
+  "image": [
+    "https://zyuanlim.github.io/talk/singapore-city-ai/featured.png"
+  ],
+  
+  "startDate": "2017-08-17T17:00:00+08:00",
+  
+  
+  "performer": {
+    "@type": "Person",
+    "name": "Zane Lim"
+  },
+  
+  "description": "Singapore AI 3rd Quarterly Meetup"
+}
+</script>
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Singapore City-AI Meetup 3.0 | Zane Lim</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Zane Lim</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Zane Lim</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>About</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <div class="pub">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Singapore City-AI Meetup 3.0</h1>
+
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <a href="/talk/singapore-city-ai/#disqus_thread"></a>
+  
+
+  
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 225px;">
+  <div style="position: relative">
+    <img src="/talk/singapore-city-ai/featured_hu888de05df73c8a1515823a492cecbeab_445348_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    
+      <br>
+    
+
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-12 col-md-3 pub-row-heading">Date</div>
+          <div class="col-12 col-md-9">
+            Aug 17, 2017 5:00 PM
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+    <div class="d-md-none space-below"></div>
+
+    
+
+    
+
+    <div class="space-below"></div>
+
+    <div class="article-style">
+      <p>I was honoured to be invited to present on Model Bias at Singapore City-AI&rsquo;s 3rd Quarterly Meetup.</p>
+<p>I presented a case study from Gojek- our drivers ranking model and various ways we can use to dissect the model in order to understand the relationship between features and prediction. I also highlighted the importance of evaluating the fairness of the model and how it impacts the overall system. Later, I used a case study from a credit default prediction challenge to demonstrate how we can use Partial Dependence Plot (PDP) to figure out how each feature affects the prediction. It was a great experience and I enjoyed interacting with other esteemed guest speakers from Nvidia, MSD, Allianz and the audience. It ended with a great panel discussion on bias in AI / ML models and how we can tackle that.</p>
+<pre><code class="language-python">import xgboost as xgb
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+import xgbfir
+pd.options.display.max_columns = 100
+pd.options.display.max_rows = 100
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+import plotly.graph_objs as go
+init_notebook_mode(connected=True)
+pd.set_option('max_colwidth',200)
+import cPickle
+import lime
+from sklearn.model_selection import train_test_split
+</code></pre>
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+<h1 id="peeking-inside-the-blackbox">Peeking Inside the Blackbox</h1>
+<p>Discover potential bias inside machine learning models</p>
+<p>Zane Lim</p>
+<ul>
+<li>
+<p>Senior data-scientist at Go-jek</p>
+</li>
+<li>
+<p>Lead and mentor a sub-team of data-scientists</p>
+</li>
+<li>
+<p>Mentor in Udacity&rsquo;s AI nanodegree</p>
+</li>
+<li>
+<p>Avid participant in Kaggle / data science hackathons</p>
+</li>
+<li>
+<p><a href="https://www.linkedin.com/in/limzane/">https://www.linkedin.com/in/limzane/</a></p>
+</li>
+<li>
+<p><a href="https://www.kaggle.com/zanelim">https://www.kaggle.com/zanelim</a></p>
+</li>
+</ul>
+<h2 id="ai-and-machine-learning-applications-and-pitfalls">AI and Machine Learning: Applications and Pitfalls</h2>
+<p>Applications</p>
+<ul>
+<li>
+<a href="https://www.theverge.com/2017/5/25/15689462/alphago-ke-jie-game-2-result-google-deepmind-china" target="_blank" rel="noopener">AlphaGo beats Ke Jie</a></li>
+<li>
+<a href="https://www.newscientist.com/article/2143144-deepmind-dojo-will-train-ai-to-beat-human-starcraft-players/" target="_blank" rel="noopener">DeepMind training AI to beat human Starcraft players</a></li>
+<li>
+<a href="https://www.theverge.com/2017/8/11/16137388/dota-2-dendi-open-ai-elon-musk" target="_blank" rel="noopener">OpenAI Dota Bot destroys world&rsquo;s best player</a></li>
+<li><a href="https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html">https://www.nytimes.com/2017/05/01/us/politics/sent-to-prison-by-a-software-programs-secret-algorithms.html</a></li>
+<li><a href="https://www.theguardian.com/technology/self-driving-cars">https://www.theguardian.com/technology/self-driving-cars</a></li>
+</ul>
+<p>Pitfalls</p>
+<ul>
+<li><a href="http://www.sciencemag.org/news/2017/04/even-artificial-intelligence-can-acquire-biases-against-race-and-gender">http://www.sciencemag.org/news/2017/04/even-artificial-intelligence-can-acquire-biases-against-race-and-gender</a></li>
+<li><a href="https://www.forbes.com/sites/mariyayao/2017/05/01/dangers-algorithmic-bias-homogenous-thinking-ai/#2228a48270b3">https://www.forbes.com/sites/mariyayao/2017/05/01/dangers-algorithmic-bias-homogenous-thinking-ai/#2228a48270b3</a></li>
+<li><a href="https://techcrunch.com/2016/12/10/5-unexpected-sources-of-bias-in-artificial-intelligence/">https://techcrunch.com/2016/12/10/5-unexpected-sources-of-bias-in-artificial-intelligence/</a></li>
+</ul>
+<p><img src="./news.png" alt="title">
+Critical as more and more decisions are made using algorithms</p>
+<h2 id="case-study-on-go-jek">Case study on Go-Jek</h2>
+<img src="./gojek.png" width="1000" height="100" align="middle"/> 
+* On-demand mobile platform that provides a variety of complete services
+    * transportation (300,000 *ojek* and car driver partners)
+    * logistics / food delivery (100,000 food vendors)
+    * payment
+    * other on-demand services (masseurs, cleaners etc.)
+* As of July 2017, downloaded more than 44 million times
+* Operates in 35 cities in Indonesia- Jakarta, Bandung, Surabaya, Bali, Medan, Yogyakarta etc.
+<h3 id="drivers-ranking-model">Drivers Ranking Model</h3>
+<p><img src="./drivers-gojek.jpg" alt="title"></p>
+<ul>
+<li>Real-time machine learning model that handles <strong>hundreds</strong> of driver assignment (per second) during peak hours</li>
+<li>Rank drivers who are available in the vicinity of customer whenever a booking is requested</li>
+<li>Based on certain criteria eg. <em>probability of completion</em></li>
+<li>Assign the job to the top ranked driver</li>
+</ul>
+<h3 id="features-of-model">Features of Model</h3>
+<ul>
+<li>basic features- transactional data (time of day, location, gps accuracy)</li>
+<li>derived features- drivers&rsquo; attributes (statistics, performance)</li>
+<li>re-trained everyday on a rolling window of historical data to ensure freshness</li>
+<li>deployed and a/b tested</li>
+</ul>
+<h3 id="results">Results</h3>
+<ul>
+<li>Very successful, conversion rate gain of <strong>3%</strong>, acceptance rate gain of <strong>10%</strong> on average against control</li>
+<li><em>How do we assess biasness and fairness of the model?</em></li>
+<li>Walking on fine line, affects the livelihood of drivers, any perceived mistreatment will trigger riots</li>
+</ul>
+<p><strong>Dissect the model and identify potential bias</strong></p>
+<ul>
+<li>Plot and visualize the &ldquo;model&rdquo; directly (individual trees in gradient boosting model)</li>
+<li>Relationship between feature and prediction
+<ul>
+<li>Partial Dependence Plot (PDP) / Individual Conditional Expectation (ICE) Plot</li>
+</ul>
+</li>
+<li>&ldquo;Explains&rdquo; the prediction
+<ul>
+<li>Local Interpretable Model-agnostic Explanations (LIME)</li>
+</ul>
+</li>
+</ul>
+<p><strong>Evaluate the impact of the model</strong></p>
+<ul>
+<li>Fairness of the system- Gini coefficient of drivers income / jobs assigned</li>
+<li>Average score (probability) / rank for each driver</li>
+</ul>
+<p><strong>Promote transparency</strong></p>
+<ul>
+<li>Monitor and measure driver complaints on not getting jobs</li>
+<li>Explain and provide suggestions to drivers on how they can improve their prospect of getting jobs (indirectly promote good behaviours)</li>
+</ul>
+<h2 id="case-study-on-credit-card-default-payment">Case study on Credit Card Default Payment</h2>
+<ul>
+<li>A dataset containing, default payments, history of payments, bill statements and demographics of 30,000 credit card clients in Taiwan from April 2005 to September 2005</li>
+<li>Predict the probability of default payment in next month</li>
+</ul>
+<p><a href="https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset">https://www.kaggle.com/uciml/default-of-credit-card-clients-dataset</a></p>
+<p>Lichman, M. (2013). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.</p>
+<pre><code class="language-python">df = pd.read_csv(&quot;../data/UCI_Credit_Card.csv&quot;)
+X = df.drop('default.payment.next.month', axis=1)
+y = df['default.payment.next.month']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+</code></pre>
+<pre><code class="language-python">with open(&quot;../data/xgb_clf.pkl&quot;) as f:
+    xgb_clf = cPickle.load(f)
+</code></pre>
+<ul>
+<li>ID: ID of each client</li>
+<li>LIMIT_BAL: Amount of given credit in NT dollars (includes individual and family/supplementary credit</li>
+<li>SEX: Gender (1=male, 2=female)</li>
+<li>EDUCATION: (1=graduate school, 2=university, 3=high school, 4=others, 5=unknown, 6=unknown)</li>
+<li>MARRIAGE: Marital status (1=married, 2=single, 3=others)</li>
+<li>AGE: Age in years</li>
+<li>PAY_0: Repayment status in September, 2005 (-1=pay duly, 1=payment delay for one month, 2=payment delay for two months, &hellip; 8=payment delay for eight months, 9=payment delay for nine months and above)</li>
+<li>PAY_2: Repayment status in August, 2005 (scale same as above)</li>
+<li>PAY_3: Repayment status in July, 2005 (scale same as above)</li>
+<li>PAY_4: Repayment status in June, 2005 (scale same as above)</li>
+<li>PAY_5: Repayment status in May, 2005 (scale same as above)</li>
+<li>PAY_6: Repayment status in April, 2005 (scale same as above)</li>
+<li>BILL_AMT1: Amount of bill statement in September, 2005 (NT dollar)</li>
+<li>BILL_AMT2: Amount of bill statement in August, 2005 (NT dollar)</li>
+<li>BILL_AMT3: Amount of bill statement in July, 2005 (NT dollar)</li>
+<li>BILL_AMT4: Amount of bill statement in June, 2005 (NT dollar)</li>
+<li>BILL_AMT5: Amount of bill statement in May, 2005 (NT dollar)</li>
+<li>BILL_AMT6: Amount of bill statement in April, 2005 (NT dollar)</li>
+<li>PAY_AMT1: Amount of previous payment in September, 2005 (NT dollar)</li>
+<li>PAY_AMT2: Amount of previous payment in August, 2005 (NT dollar)</li>
+<li>PAY_AMT3: Amount of previous payment in July, 2005 (NT dollar)</li>
+<li>PAY_AMT4: Amount of previous payment in June, 2005 (NT dollar)</li>
+<li>PAY_AMT5: Amount of previous payment in May, 2005 (NT dollar)</li>
+<li>PAY_AMT6: Amount of previous payment in April, 2005 (NT dollar)</li>
+<li>default.payment.next.month: Default payment (1=yes, 0=no)</li>
+</ul>
+<h3 id="plotting-the-model-directly">Plotting the &ldquo;model&rdquo; directly</h3>
+<pre><code class="language-python">features_importance = pd.DataFrame.from_dict(xgb_clf.get_fscore(), orient='index').reset_index().rename(columns={'index': 'features', 0: 'importance'})
+features_importance.sort_values('importance', ascending=False, inplace=True)
+</code></pre>
+<pre><code class="language-python">features_importance.plot.barh(x='features', y='importance', figsize=(20,15))
+plt.gca().invert_yaxis()
+</code></pre>
+<p><img src="./singapore-city-ai_17_0.png" alt="png"></p>
+<pre><code class="language-python"># plotting the trees directly
+xgb.to_graphviz(xgb_clf, num_trees=0, size='150,200') 
+</code></pre>
+<p><img src="./singapore-city-ai_18_0.svg" alt="svg"></p>
+<h3 id="partial-dependence-plot-pdp">Partial Dependence Plot (PDP)</h3>
+<ul>
+<li>A graph plotting the relationship of one single feature with the prediction / probability on average</li>
+<li>For each combination of a unique value of the feature with all other features, what is the average prediction / probability</li>
+<li>One caveat of using average is that it does not represent the usual case, as in any single realistic case, it depends on the combination with other features</li>
+</ul>
+<pre><code class="language-python">def plotly_lines(df, x, y):
+    data = [
+    go.Scatter(
+        x=df[x], # assign x as the dataframe column 'x'
+        y=df[y],
+        name=x
+    )
+    ]
+    return data
+
+def plotly_figure(df, title, x_title, y_title, x, y):
+    layout = go.Layout(
+        title=title,
+        xaxis=dict(
+            title=x_title,
+            titlefont=dict(
+                family='Courier New, monospace',
+                size=18,
+                color='#7f7f7f'
+            )
+        ),
+        yaxis=dict(
+            title=y_title,
+            titlefont=dict(
+                family='Courier New, monospace',
+                size=18,
+                color='#7f7f7f'
+            )
+        )
+    )
+    return go.Figure(data=plotly_lines(df, x, y), layout=layout)
+</code></pre>
+<pre><code class="language-python">df_plot = pd.read_csv(&quot;../data/age.csv&quot;)
+ax = df_plot.plot(x='AGE', y='yhat', title='Age', figsize=(15,5), legend=False)
+ax.set_xlabel(&quot;Age&quot;)
+ax.set_ylabel(&quot;Probability of Default&quot;)
+</code></pre>
+<pre><code>&lt;matplotlib.text.Text at 0x11d3003d0&gt;
+</code></pre>
+<p><img src="./singapore-city-ai_21_1.png" alt="png"></p>
+<pre><code class="language-python">df_plot = pd.read_csv(&quot;../data/sex.csv&quot;)
+ax = df_plot.plot(x='SEX', y='yhat', title='Sex', figsize=(15,5), legend=False)
+ax.set_xlabel(&quot;Sex&quot;)
+ax.set_ylabel(&quot;Probability of Default&quot;)
+</code></pre>
+<pre><code>&lt;matplotlib.text.Text at 0x11d5f0290&gt;
+</code></pre>
+<p><img src="./singapore-city-ai_22_1.png" alt="png"></p>
+<pre><code class="language-python">df_plot = pd.read_csv(&quot;../data/marriage.csv&quot;)
+ax = df_plot.plot(x='MARRIAGE', y='yhat', title='Marital Status', figsize=(15,5), legend=False)
+ax.set_xlabel(&quot;Marital Status&quot;)
+ax.set_ylabel(&quot;Probability of Default&quot;)
+</code></pre>
+<pre><code>&lt;matplotlib.text.Text at 0x11d7bba50&gt;
+</code></pre>
+<p><img src="./singapore-city-ai_23_1.png" alt="png"></p>
+<pre><code class="language-python">df.MARRIAGE.value_counts(normalize=True, sort=False)
+</code></pre>
+<pre><code>0    0.001800
+1    0.455300
+2    0.532133
+3    0.010767
+Name: MARRIAGE, dtype: float64
+</code></pre>
+<pre><code class="language-python">df_plot = pd.read_csv(&quot;../data/education.csv&quot;)
+ax = df_plot.plot(x='EDUCATION', y='yhat', title='Education', figsize=(15,5), legend=False)
+ax.set_xlabel(&quot;Education&quot;)
+ax.set_ylabel(&quot;Probability of Default&quot;)
+</code></pre>
+<pre><code>&lt;matplotlib.text.Text at 0x11d9a9a50&gt;
+</code></pre>
+<p><img src="./singapore-city-ai_25_1.png" alt="png"></p>
+<pre><code class="language-python">df.EDUCATION.value_counts(normalize=True, sort=False)
+</code></pre>
+<pre><code>0    0.000467
+1    0.352833
+2    0.467667
+3    0.163900
+4    0.004100
+5    0.009333
+6    0.001700
+Name: EDUCATION, dtype: float64
+</code></pre>
+<p>Other techniques to dissect the black box</p>
+<ul>
+<li>Individual Conditional Expectation (ICE) Plot</li>
+<li>Local Interpretable Model-agnostic Explanations (LIME)</li>
+</ul>
+<p>Reference:</p>
+<ul>
+<li>
+<a href="https://arxiv.org/pdf/1602.04938.pdf" target="_blank" rel="noopener">Why Should I Trust You?” Explaining the Predictions of Any Classifier</a></li>
+<li>
+<a href="https://arxiv.org/pdf/1309.6392.pdf" target="_blank" rel="noopener">Peeking Inside the Black Box: Visualizing Statistical Learning with Plots of Individual Conditional Expectation</a></li>
+<li><a href="https://www.datarobot.com/blog/give-me-one-good-reason-to-trust-artificial-intelligence/">https://www.datarobot.com/blog/give-me-one-good-reason-to-trust-artificial-intelligence/</a></li>
+</ul>
+<p>&quot;&rdquo;&rdquo;</p>
+<pre><code>Build AI with conscience, trust and empathy
+</code></pre>
+<p>&quot;&rdquo;&rdquo;</p>
+<p>Thank you!</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://zyuanlim.github.io/talk/singapore-city-ai/&amp;text=Singapore%20City-AI%20Meetup%203.0" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://zyuanlim.github.io/talk/singapore-city-ai/&amp;t=Singapore%20City-AI%20Meetup%203.0" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Singapore%20City-AI%20Meetup%203.0&amp;body=https://zyuanlim.github.io/talk/singapore-city-ai/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://zyuanlim.github.io/talk/singapore-city-ai/&amp;title=Singapore%20City-AI%20Meetup%203.0" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Singapore%20City-AI%20Meetup%203.0%20https://zyuanlim.github.io/talk/singapore-city-ai/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://zyuanlim.github.io/talk/singapore-city-ai/&amp;title=Singapore%20City-AI%20Meetup%203.0" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      <img class="avatar mr-3 avatar-circle" src="https://s.gravatar.com/avatar/845885bcd14a73f1f4a6559b2e63e241?s=200')" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://zyuanlim.github.io/">Zane Lim</a></h5>
+      <h6 class="card-subtitle">Data Scientist / Engineer</h6>
+      <p class="card-text">My professional interests include machine learning, data engineering, data strategy, software architecture, CI/CD.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/limzane" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/zyuanlim" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/zyuanlim" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+<section id="comments">
+  
+    
+<div id="disqus_thread"></div>
+<script>
+  let disqus_config = function () {
+    
+    
+    
+  };
+  (function() {
+    if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+      document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+      return;
+    }
+    var d = document, s = d.createElement('script'); s.async = true;
+    s.src = 'https://' + "zanelim-1" + '.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+  
+</section>
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</div>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.4/mermaid.min.js" integrity="sha256-JEqEejGt4tR35L0a1zodzsV0/PJ6GIf7J4yDtywdrH8=" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/go.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    <script id="dsq-count-scr" src="https://zanelim-1.disqus.com/count.js" async></script>
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a8d7005002cb4a052fd6d721e83df9ba.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
