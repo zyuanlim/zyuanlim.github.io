@@ -20,7 +20,7 @@
       <description>&lt;p&gt;This is a presentation that I gave at NUS IEEE Young Professionals Analytics &amp;amp; Machine Learning. The full codes and slides can be found 
 &lt;a href=&#34;https://github.com/zyuanlim/NUS-IEEE-Analytics-Talk&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;iframe
-       src=&#34;https://nbviewer.jupyter.org/github/zyuanlim/NUS-IEEE-Analytics-Talk/blob/caf8c227cee7d8a463313dfb93cf45978b9824f6/PeekingIntoTheBlackBox.ipynb&#34;
+       src=&#34;https://nbviewer.jupyter.org/github/zyuanlim/NUS-IEEE-Analytics-Talk/blob/8ad155d14ec5857a1e7853e7951fafcca94b9460/PeekingIntoTheBlackBox.ipynb&#34;
        width=&#34;90%&#34;
        height=&#34;1000px&#34;
        style=&#34;border:none;&#34;&gt;
@@ -97,13 +97,18 @@ from sklearn.model_selection import train_test_split
 Critical as more and more decisions are made using algorithms&lt;/p&gt;
 &lt;h2 id=&#34;case-study-on-go-jek&#34;&gt;Case study on Go-Jek&lt;/h2&gt;
 &lt;img src=&#34;./gojek.png&#34; width=&#34;1000&#34; height=&#34;100&#34; align=&#34;middle&#34;/&gt; 
-* On-demand mobile platform that provides a variety of complete services
-    * transportation (300,000 *ojek* and car driver partners)
-    * logistics / food delivery (100,000 food vendors)
-    * payment
-    * other on-demand services (masseurs, cleaners etc.)
-* As of July 2017, downloaded more than 44 million times
-* Operates in 35 cities in Indonesia- Jakarta, Bandung, Surabaya, Bali, Medan, Yogyakarta etc.
+&lt;ul&gt;
+&lt;li&gt;On-demand mobile platform that provides a variety of complete services
+&lt;ul&gt;
+&lt;li&gt;transportation (300,000 &lt;em&gt;ojek&lt;/em&gt; and car driver partners)&lt;/li&gt;
+&lt;li&gt;logistics / food delivery (100,000 food vendors)&lt;/li&gt;
+&lt;li&gt;payment&lt;/li&gt;
+&lt;li&gt;other on-demand services (masseurs, cleaners etc.)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;As of July 2017, downloaded more than 44 million times&lt;/li&gt;
+&lt;li&gt;Operates in 35 cities in Indonesia- Jakarta, Bandung, Surabaya, Bali, Medan, Yogyakarta etc.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;drivers-ranking-model&#34;&gt;Drivers Ranking Model&lt;/h3&gt;
 &lt;p&gt;&lt;img src=&#34;./drivers-gojek.jpg&#34; alt=&#34;title&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
@@ -121,7 +126,7 @@ Critical as more and more decisions are made using algorithms&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Very successful, conversion rate gain of &lt;strong&gt;3%&lt;/strong&gt;, acceptance rate gain of &lt;strong&gt;10%&lt;/strong&gt; on average against control&lt;/li&gt;
+&lt;li&gt;Very successful, improved conversion rate and acceptance rate against control&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;How do we assess biasness and fairness of the model?&lt;/em&gt;&lt;/li&gt;
 &lt;li&gt;Walking on fine line, affects the livelihood of drivers, any perceived mistreatment will trigger riots&lt;/li&gt;
 &lt;/ul&gt;
