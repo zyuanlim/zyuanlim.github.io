@@ -3,17 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://zyuanlim.github.io/post/hello-again-world/</loc>
+    <lastmod>2020-03-07T22:25:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zyuanlim.github.io/post/</loc>
+    <lastmod>2020-03-07T22:25:33+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://zyuanlim.github.io/</loc>
+    <lastmod>2020-03-07T22:25:33+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://zyuanlim.github.io/talk/nus-ieee-ml-talk/</loc>
     <lastmod>2017-09-16T10:00:00+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://zyuanlim.github.io/talk/</loc>
-    <lastmod>2017-09-16T10:00:00+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://zyuanlim.github.io/</loc>
     <lastmod>2017-09-16T10:00:00+08:00</lastmod>
   </url>
   
@@ -32,10 +42,6 @@
   
   <url>
     <loc>https://zyuanlim.github.io/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>https://zyuanlim.github.io/post/</loc>
   </url>
   
   <url>

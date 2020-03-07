@@ -5,12 +5,21 @@
     <link>https://zyuanlim.github.io/</link>
       <atom:link href="https://zyuanlim.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Zane Lim</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 16 Sep 2017 10:00:00 +0800</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 07 Mar 2020 22:25:33 +0800</lastBuildDate>
     <image>
       <url>img/map[gravatar:%!s(bool=true) shape:circle]</url>
       <title>Zane Lim</title>
       <link>https://zyuanlim.github.io/</link>
     </image>
+    
+    <item>
+      <title>Hello Again World</title>
+      <link>https://zyuanlim.github.io/post/hello-again-world/</link>
+      <pubDate>Sat, 07 Mar 2020 22:25:33 +0800</pubDate>
+      <guid>https://zyuanlim.github.io/post/hello-again-world/</guid>
+      <description>&lt;p&gt;This marks the first post in my reincarnated blog to serve as a journal of my data science journey. As I embark on a life-long journey on data science and tech, I hope to pen down my stories and share my experience with other people through this blog.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>NUS IEEE-Young Professionals Analytics &amp; Machine Learning Talk</title>
