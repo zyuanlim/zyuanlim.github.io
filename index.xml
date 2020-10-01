@@ -129,7 +129,7 @@ Critical as more and more decisions are made using algorithms&lt;/p&gt;
 &lt;h3 id=&#34;features-of-model&#34;&gt;Features of Model&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;basic features- transactional data (time of day, location, gps accuracy)&lt;/li&gt;
-&lt;li&gt;derived features- drivers&amp;rsquo; attributes (statistics, performance)&lt;/li&gt;
+&lt;li&gt;derived features- drivers&#39; attributes (statistics, performance)&lt;/li&gt;
 &lt;li&gt;re-trained everyday on a rolling window of historical data to ensure freshness&lt;/li&gt;
 &lt;li&gt;deployed and a/b tested&lt;/li&gt;
 &lt;/ul&gt;
@@ -319,10 +319,10 @@ Name: EDUCATION, dtype: float64
 &lt;a href=&#34;https://arxiv.org/pdf/1309.6392.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Peeking Inside the Black Box: Visualizing Statistical Learning with Plots of Individual Conditional Expectation&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;https://www.datarobot.com/blog/give-me-one-good-reason-to-trust-artificial-intelligence/&#34;&gt;https://www.datarobot.com/blog/give-me-one-good-reason-to-trust-artificial-intelligence/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;Build AI with conscience, trust and empathy
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/p&gt;
 &lt;p&gt;Thank you!&lt;/p&gt;
 </description>
     </item>
